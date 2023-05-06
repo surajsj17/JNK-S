@@ -1,7 +1,7 @@
 def gv
 pipeline{
     agent any
-    paramenter{
+    parameters{
     choice (name : 'VERSION', choices: ['1','2','3'] , description:'')
     }
     stages{
