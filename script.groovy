@@ -4,7 +4,7 @@ def Build(){
 def Test(){
     when{
         expression{
-    choice == '2' || choice == '3'
+           params.choice == '2' || params.choice == '3'
         }
     }
     sh 'echo "Testing........."'
@@ -12,3 +12,4 @@ def Test(){
 def Deployed(){
     sh 'echo "deployed......."'
 }
+return this  
