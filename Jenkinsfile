@@ -8,7 +8,12 @@ pipeline{
         stage ('init'){
             steps {
                 script{
-                        gv = load "script.groovy"
+                        try {
+                        gv = load 'script.groovy'
+                    } catch (Exception e) {
+                        echo "Error loading script.groovy: ${e.message}"
+                        error "Failed to load script.groovy"
+                    }
                 }         
             }
         }
