@@ -4,7 +4,7 @@ def Build(){
 def Test(){
     when{
         expression{
-           params.choice == '2' || params.choice == '3'
+           params.choice == '2'
         }
     }
     sh 'echo "Testing........."'
